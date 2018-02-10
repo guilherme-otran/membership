@@ -41,6 +41,7 @@ class Ability
     if user.limited?
       can :read, :all
       can :manage, AdminUser, id: user.id
+      can :manage, Member
       cannot :change_role, AdminUser
     end
   end
