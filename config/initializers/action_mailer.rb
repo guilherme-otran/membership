@@ -10,4 +10,8 @@ if ENV["MAIL_ADDRESS"].present?
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  ActionMailer::Base.default_options = {
+    from: "noreply@example.com"
+  }
 end
