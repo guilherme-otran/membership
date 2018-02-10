@@ -1,4 +1,6 @@
 if ENV["MAIL_ADDRESS"].present?
+  ActionMailer::Base.delivery_method = :smtp
+
   ActionMailer::Base.smtp_settings = {
     :address        => ENV["MAIL_ADDRESS"],
     :port           => '587',
