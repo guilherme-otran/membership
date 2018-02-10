@@ -4,9 +4,9 @@ class Member < ApplicationRecord
 
   validates :birthdate, presence: true
 
-  validates :phone1, length: { in: 10..11 }
-  validates :phone2, length: { in: 10..11 }
-  validates :phone3, length: { in: 10..11 }
+  validates :phone1, length: { in: 10..11 }, allow_nil: true, allow_blank: true
+  validates :phone2, length: { in: 10..11 }, allow_nil: true, allow_blank: true
+  validates :phone3, length: { in: 10..11 }, allow_nil: true, allow_blank: true
 
   before_validation do
     clear_phones!
